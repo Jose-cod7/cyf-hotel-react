@@ -52,6 +52,11 @@ tr {
   text-align: center;
 }
 
+.cards {
+  width: 100%;
+  text-align: center;
+}
 .card {
   width: 18rem;
+  display: inline-block;
 }
