@@ -1,8 +1,8 @@
 import React from "react";
 
 const Footer = props => {
-  const list = props.info.map(contacDetails => (
-    <li key={contacDetails}>{contacDetails}</li>
+  const list = props.info.map(contactDetails => (
+    <li key={contactDetails}>{contactDetails}</li>
   ));
   return <ul>{list}</ul>;
 };
