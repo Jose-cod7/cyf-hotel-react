@@ -1,37 +1,43 @@
 import React from "react";
+import moment from "moment";
 
 const SearchResults = props => {
   const results = props.results;
+  console.log(results);
   return (
     <div id="search-results">
-      <table class="table table-dark">
+      <table className="table table-dark">
         <thead>
           <tr>
             <th scope="col">#</th>
+            <th scope="col">Title</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Email</th>
+            <th scope="col">Room id</th>
+            <th scope="col">Check in date</th>
+            <th scope="col">Check out date</th>
+            <th scope="col">Nights per guest</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {results.map((row, index) => {
+            return (
+              <tr key={index}>
+                <th scope="row">{row.id}</th>
+                <td>{row.title}</td>
+                <td>{row.firstName}</td>
+                <td>{row.surname}</td>
+                <td>{row.email}</td>
+                <td>{row.roomId}</td>
+                <td>{row.checkInDate}</td>
+                <td>{row.checkOutDate}</td>
+                <td>
+                  {moment(row.checkOutDate).diff(row.checkInDate, "days")}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
