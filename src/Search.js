@@ -1,13 +1,7 @@
 import React from "react";
 import SearchButton from "./components/SearchButton";
-import Footer from "./components/Footer";
 
 const Search = () => {
-  const contactDetails = [
-    "123 Fake Street, London, E1 4UD",
-    "hello@fakehotel.com",
-    "0123 456789"
-  ];
   return (
     <div className="search">
       <div className="page-header">
@@ -29,7 +23,6 @@ const Search = () => {
           </form>
         </div>
       </div>
-      <Footer info={contactDetails} />
     </div>
   );
 };

@@ -2,10 +2,16 @@ import React from "react";
 
 import Bookings from "./Bookings";
 import Heading from "./components/Heading";
+import Footer from "./components/Footer";
 import TouristInfoCards from "./components/TouristInfoCards";
 import "./App.css";
 
 const App = () => {
+  const contactDetails = [
+    "123 Fake Street, London, E1 4UD",
+    "hello@fakehotel.com",
+    "0123 456789"
+  ];
   const touristWebsites = [
     {
       name: "Glasgow",
@@ -31,6 +37,7 @@ const App = () => {
       <Heading />
       <TouristInfoCards cards={touristWebsites} />
       <Bookings />
+      <Footer info={contactDetails} />
     </div>
   );
 };
