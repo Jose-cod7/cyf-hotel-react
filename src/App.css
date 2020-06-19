@@ -62,3 +62,7 @@ tr {
   width: 18rem;
   display: inline-block;
 }
+
+.selected-row {
+  background-color: darkorange;
+}
